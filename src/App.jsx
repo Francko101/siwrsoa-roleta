@@ -163,8 +163,7 @@ export default function App() {
   const saved = loadFromStorage();
 
   const [entries, setEntries] = useState(saved?.entries || DEFAULT_ENTRIES);
-  const [bulkText, setBulkText] = useState((saved?.entries || DEFAULT_ENTRIES).join("
-"));
+  const [bulkText, setBulkText] = useState((saved?.entries || DEFAULT_ENTRIES).join("\\n"));
   const [rotation, setRotation] = useState(0);
   const [winner, setWinner] = useState("");
   const [lastWinnerIndex, setLastWinnerIndex] = useState(null);
